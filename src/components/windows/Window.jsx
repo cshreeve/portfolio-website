@@ -1,18 +1,18 @@
 import "./Windows.css"
 
-function AboutWindow({ onClose }) {
+function Window({ title, onClose, children }) {
     return (
         <div className="window">
             <div className="window-header">
-                <h1>About Me</h1>
+                <h1>{title}</h1>
                 <button onClick={ onClose }>X</button>
             </div>
             
             <div className="window-content">
-                <p>This is about me...</p>
+                {children}
             </div>
         </div>
     );
 }
 
-export default AboutWindow;
+export default Window;
