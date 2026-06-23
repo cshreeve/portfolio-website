@@ -1,0 +1,26 @@
+.window {
+    border: 1px solid black;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+
+    background: white;
+    border: 2px solid black;
+}
+
+.window-header {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+}
+
+.window-header button{
+    position: absolute;
+    right: 0.5rem;
+    top: 10%;
+}
