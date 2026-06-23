@@ -7,8 +7,9 @@ function AboutWindow({ onClose }) {
                 <h1>About Me</h1>
                 <button onClick={ onClose }>X</button>
             </div>
+            
             <div className="window-content">
-                <h2>About Me</h2>
+                <p>This is about me...</p>
             </div>
         </div>
     );
