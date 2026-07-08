@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./Home.css"
-import FolderIcon from "../components/FolderIcon"
+import desktopBackground from "../assets/backgrounds/hills.jpg";
+import DesktopIcon from "../components/DesktopIcon"
 import Window from "../components/windows/Window"
 import AboutContent from "../components/windows/content/About"
 import ProjectsContent from "../components/windows/content/Projects"
 import ResumeContent from "../components/windows/content/Resume"
+import folderIcon from "../assets/icons/folder.png";
+import terminalIcon from "../assets/icons/terminal.png";
+import arcadeIcon from "../assets/icons/arcade.png";
 
 function Home(){
     const [showAbout, setShowAbout] = useState(false);
@@ -12,11 +16,17 @@ function Home(){
     const [showResume, setShowResume] = useState(false);
 
     return (
-        <div className="desktop">
-            <div className="folders">
-                <FolderIcon name="About Me" onClick={() => setShowAbout(true)}></FolderIcon>
-                <FolderIcon name="Projects" onClick={() => setShowProjects(true)}></FolderIcon>
-                <FolderIcon name="Resume" onClick={() => setShowResume(true)}></FolderIcon>
+        <div className="desktop" style={{backgroundImage: `url(${desktopBackground})`}}>
+            <div className="desktop-icons">
+                <div className="folders">
+                    <DesktopIcon icon={folderIcon} name="About Me" onClick={() => setShowAbout(true)}></DesktopIcon>
+                    <DesktopIcon icon={folderIcon} name="Projects" onClick={() => setShowProjects(true)}></DesktopIcon>
+                    <DesktopIcon icon={folderIcon} name="Resume" onClick={() => setShowResume(true)}></DesktopIcon>
+                </div>
+                <div className="applications">
+                    <DesktopIcon icon={terminalIcon} name="Terminal" onClick={() => setShowAbout(true)}></DesktopIcon>
+                    <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => setShowAbout(true)}></DesktopIcon>
+                </div>
             </div>
 
             {showAbout && ( 

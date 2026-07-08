@@ -1,9 +1,11 @@
-.folder-icon-image {
+.desktop-icon-image {
     width: 75px;
     height: auto;
 }
 
-.folder-icon-label {
+.desktop-icon-label {
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 0.5rem;
 }

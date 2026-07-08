@@ -1,15 +1,23 @@
 .desktop {
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
-.folders {
+.desktop-icons {
     position: absolute;
     inset: 0;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    gap: 2rem;
+}
+
+.folders, .applications {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
 }
