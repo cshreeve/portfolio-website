@@ -2,6 +2,10 @@
     position: relative;
     height: 100vh;
     width: 100vw;
+
+    background-image: url("../assets/backgrounds/desktop.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .desktop-icons {

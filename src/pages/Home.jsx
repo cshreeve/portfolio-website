@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Home.css"
-import desktopBackground from "../assets/backgrounds/hills.jpg";
+import desktopBackground from "../assets/backgrounds/desktop.png";
 import DesktopIcon from "../components/DesktopIcon"
 import Window from "../components/windows/Window"
 import AboutContent from "../components/windows/content/About"
@@ -16,7 +16,7 @@ function Home(){
     const [showResume, setShowResume] = useState(false);
 
     return (
-        <div className="desktop" style={{backgroundImage: `url(${desktopBackground})`}}>
+        <div className="desktop">
             <div className="desktop-icons">
                 <div className="folders">
                     <DesktopIcon icon={folderIcon} name="About Me" onClick={() => setShowAbout(true)}></DesktopIcon>
@@ -24,7 +24,7 @@ function Home(){
                     <DesktopIcon icon={folderIcon} name="Resume" onClick={() => setShowResume(true)}></DesktopIcon>
                 </div>
                 <div className="applications">
-                    <DesktopIcon icon={terminalIcon} name="Terminal" onClick={() => setShowAbout(true)}></DesktopIcon>
+                    <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => setShowAbout(true)}></DesktopIcon>
                     <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => setShowAbout(true)}></DesktopIcon>
                 </div>
             </div>
