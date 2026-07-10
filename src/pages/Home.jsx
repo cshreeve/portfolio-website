@@ -1,45 +1,49 @@
 import { useState } from "react";
 import "./Home.css"
-import desktopBackground from "../assets/backgrounds/desktop.png";
+
 import DesktopIcon from "../components/DesktopIcon"
-import Window from "../components/windows/Window"
-import AboutContent from "../components/windows/content/About"
-import ProjectsContent from "../components/windows/content/Projects"
-import ResumeContent from "../components/windows/content/Resume"
+import WindowManager from "../components/windows/WindowManager"
+
 import folderIcon from "../assets/icons/folder.png";
 import terminalIcon from "../assets/icons/terminal.png";
 import arcadeIcon from "../assets/icons/arcade.png";
 
 function Home(){
-    const [showAbout, setShowAbout] = useState(false);
-    const [showProjects, setShowProjects] = useState(false);
-    const [showResume, setShowResume] = useState(false);
+    const [windows, setWindows] = useState({
+        about: false,
+        projects: false,
+        resume: false,
+    });
+
+    function openWindow(name) {
+        setWindows(prev => ({
+            ...prev,
+            [name]: true
+        }));
+    }
+
+    function closeWindow(name) {
+        setWindows(prev => ({
+            ...prev,
+            [name]: false
+        }));
+    }
 
     return (
         <div className="desktop">
             <div className="desktop-icons">
                 <div className="folders">
-                    <DesktopIcon icon={folderIcon} name="About Me" onClick={() => setShowAbout(true)}></DesktopIcon>
-                    <DesktopIcon icon={folderIcon} name="Projects" onClick={() => setShowProjects(true)}></DesktopIcon>
-                    <DesktopIcon icon={folderIcon} name="Resume" onClick={() => setShowResume(true)}></DesktopIcon>
+                    <DesktopIcon icon={folderIcon} name="About Me" onClick={() => openWindow("about")}></DesktopIcon>
+                    <DesktopIcon icon={folderIcon} name="Projects" onClick={() => openWindow("projects")}></DesktopIcon>
+                    <DesktopIcon icon={folderIcon} name="Resume" onClick={() => openWindow("resume")}></DesktopIcon>
                 </div>
                 <div className="applications">
-                    <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => setShowAbout(true)}></DesktopIcon>
-                    <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => setShowAbout(true)}></DesktopIcon>
+                    <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => openWindow("about")}></DesktopIcon>
+                    <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => openWindow("about")}></DesktopIcon>
                 </div>
             </div>
 
-            {showAbout && ( 
-                <Window title="About Me" onClose={() => setShowAbout(false)}> <AboutContent/></Window> 
-            )}
-
-            {showProjects && ( 
-                <Window title="My Projects" onClose={() => setShowProjects(false)}> <ProjectsContent/></Window> 
-            )}
-
-            {showResume && ( 
-                <Window title="My Resume" onClose={() => setShowResume(false)}> <ResumeContent/></Window> 
-            )}
+            <WindowManager windows={windows} closeWindow={closeWindow}></WindowManager>
         </div>
     );
 }
