@@ -47,6 +47,17 @@ function Home(){
         }));
     }
 
+    function moveWindow(name, x, y) {
+        setWindows(prev => ({
+            ...prev,
+            [name]: {
+                ...prev[name],
+                x,
+                y
+            }
+        }));
+    }
+
     return (
         <div className="desktop">
             <div className="desktop-icons">
@@ -61,7 +72,7 @@ function Home(){
                 </div>
             </div>
 
-            <WindowManager windows={windows} closeWindow={closeWindow}></WindowManager>
+            <WindowManager windows={windows} moveWindow={moveWindow} closeWindow={closeWindow}></WindowManager>
         </div>
     );
 }
