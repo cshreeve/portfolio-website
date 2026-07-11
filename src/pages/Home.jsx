@@ -10,22 +10,40 @@ import arcadeIcon from "../assets/icons/arcade.png";
 
 function Home(){
     const [windows, setWindows] = useState({
-        about: false,
-        projects: false,
-        resume: false,
+        about: {
+            open: false,
+            x: null,
+            y: null
+        },
+        projects: {
+            open: false,
+            x: null,
+            y: null
+        },
+        resume: {
+            open: false,
+            x: null,
+            y: null
+        },
     });
 
     function openWindow(name) {
         setWindows(prev => ({
             ...prev,
-            [name]: true
+            [name]: {
+                ...prev[name],
+                open: true
+            }
         }));
     }
 
     function closeWindow(name) {
         setWindows(prev => ({
             ...prev,
-            [name]: false
+            [name]: {
+                ...prev[name],
+                open: false
+            }
         }));
     }
 

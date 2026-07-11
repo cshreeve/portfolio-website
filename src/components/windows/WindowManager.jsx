@@ -9,16 +9,16 @@ function WindowManager({ windows, closeWindow }) {
     return (
         <>
 
-            {windows.about && (
-                 <Window title="About Me" onClose={() => closeWindow("about")}> <AboutContent/></Window> 
+            {windows.about.open && (
+                 <Window title="About Me" x={windows.about.x} y={windows.about.y} onClose={() => closeWindow("about")}> <AboutContent/></Window> 
             )}
 
-            {windows.projects && (
-                <Window title="My Projects" onClose={() => closeWindow("projects")}> <ProjectsContent/></Window>
+            {windows.projects.open && (
+                <Window title="My Projects" x={windows.projects.x} y={windows.projects.y} onClose={() => closeWindow("projects")}> <ProjectsContent/></Window>
             )}
 
-            {windows.resume && (
-                <Window title="My Resume" onClose={() => closeWindow("resume")}> <ResumeContent/></Window>
+            {windows.resume.open && (
+                <Window title="My Resume" x={windows.resume.x} y={windows.resume.y} onClose={() => closeWindow("resume")}> <ResumeContent/></Window>
             )}
 
         </>
