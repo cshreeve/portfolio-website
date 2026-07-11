@@ -41,7 +41,8 @@ function Home(){
         setWindows(prev => ({
             ...prev,
             [name]: {
-                ...prev[name],
+                x: null,
+                y: null,
                 open: false
             }
         }));
