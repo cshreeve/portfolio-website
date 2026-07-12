@@ -23,11 +23,6 @@
     border-bottom: 1px solid black;
 
     user-select: none;
-    cursor: grab;
-}
-
-.window-header:active {
-    cursor: grab;
 }
 
 .window-header h1 {
