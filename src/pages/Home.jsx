@@ -15,6 +15,7 @@ function Home(){
             title: "About Me",
             open: false,
             minimized: false,
+            maximized: false,
             x: null,
             y: null
         },
@@ -22,6 +23,7 @@ function Home(){
             title: "Projects",
             open: false,
             minimized: false,
+            maximized: false,
             x: null,
             y: null
         },
@@ -29,6 +31,7 @@ function Home(){
             title: "Resume",
             open: false,
             minimized: false,
+            maximized: false,
             x: null,
             y: null
         },
@@ -61,6 +64,16 @@ function Home(){
             [name]: {
                 ...prev[name],
                 minimized: true
+            }
+        }));
+    }
+
+    function maximizeWindow(name) {
+        setWindows(prev => ({
+            ...prev,
+            [name]: {
+                ...prev[name],
+                maximized: !prev[name].maximized
             }
         }));
     }
@@ -100,7 +113,7 @@ function Home(){
                 </div>
             </div>
 
-            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} closeWindow={closeWindow}></WindowManager>
+            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} maximizeWindow={maximizeWindow} closeWindow={closeWindow}></WindowManager>
             <TaskBar windows={windows} openWindow={restoreWindow}></TaskBar>
         </div>
     );
