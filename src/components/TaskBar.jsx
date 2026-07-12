@@ -1,12 +1,11 @@
 import "./TaskBar.css"
 
-function TaskBar({windows}){
-    console.log(windows);
+function TaskBar({windows, openWindow}){
     return (
        <div className="taskbar">
         {Object.entries(windows).map(([id, window]) => (
             window.open && (
-                <button key={id}>{window.title}</button>
+                <button onClick={() => openWindow(id) } key={id}>{window.title}</button>
             )
         ))}
         </div>

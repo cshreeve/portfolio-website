@@ -34,7 +34,11 @@
     color: white;
 }
 
-.window-header button {
+.window-controls {
+    display: flex;
+}
+
+.window-controls button {
     font-size: 0.7rem;
     font-weight: bold;
     line-height: 1;

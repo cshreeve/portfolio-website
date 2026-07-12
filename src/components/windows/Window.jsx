@@ -1,7 +1,7 @@
 import "./Windows.css"
 import { useRef, useState } from "react";
 
-function Window({ title, x, y, onMove, onClose, children }) {
+function Window({ title, x, y, onMove, onMinimize, onClose, children }) {
     const [dragging, setDragging] = useState(false);
     const [offset, setOffset] = useState({x: 0, y:0});
     const windowRef = useRef();
@@ -42,7 +42,10 @@ function Window({ title, x, y, onMove, onClose, children }) {
             style={{ left: x ?? "50%", top: y ?? "50%", transform: x === null ? "translate(-50%, -50%)" : "none"}}>
             <div className="window-header" onMouseDown={handleMouseDown}>
                 <h1>{title}</h1>
-                <button onClick={ onClose }>X</button>
+                <div className="window-control">
+                    <button onClick={ onMinimize }>-</button>
+                    <button onClick={ onClose }>X</button>
+                </div>
             </div>
             
             <div className="window-content">

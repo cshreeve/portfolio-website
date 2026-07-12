@@ -39,7 +39,8 @@ function Home(){
             ...prev,
             [name]: {
                 ...prev[name],
-                open: true
+                open: true,
+                minimized: false,
             }
         }));
     }
@@ -50,6 +51,26 @@ function Home(){
             [name]: {
                 ...prev[name],
                 open: false
+            }
+        }));
+    }
+
+    function minimizeWindow(name) {
+        setWindows(prev => ({
+            ...prev,
+            [name]: {
+                ...prev[name],
+                minimized: true
+            }
+        }));
+    }
+
+    function restoreWindow(name) {
+        setWindows(prev => ({
+            ...prev,
+            [name]: {
+                ...prev[name],
+                minimized: false
             }
         }));
     }
@@ -79,8 +100,8 @@ function Home(){
                 </div>
             </div>
 
-            <WindowManager windows={windows} moveWindow={moveWindow} closeWindow={closeWindow}></WindowManager>
-            <TaskBar windows={windows}></TaskBar>
+            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} closeWindow={closeWindow}></WindowManager>
+            <TaskBar windows={windows} openWindow={restoreWindow}></TaskBar>
         </div>
     );
 }
