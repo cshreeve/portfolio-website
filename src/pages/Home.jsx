@@ -10,6 +10,7 @@ import terminalIcon from "../assets/icons/terminal.png";
 import arcadeIcon from "../assets/icons/arcade.png";
 
 function Home(){
+    const [topZIndex, setTopZIndex] = useState(1);
     const [windows, setWindows] = useState({
         about: {
             title: "About Me",
@@ -17,7 +18,8 @@ function Home(){
             minimized: false,
             maximized: false,
             x: null,
-            y: null
+            y: null,
+            zIndex: 1
         },
         projects: {
             title: "Projects",
@@ -25,7 +27,8 @@ function Home(){
             minimized: false,
             maximized: false,
             x: null,
-            y: null
+            y: null,
+            zIndex: 1
         },
         resume: {
             title: "Resume",
@@ -33,7 +36,8 @@ function Home(){
             minimized: false,
             maximized: false,
             x: null,
-            y: null
+            y: null,
+            zIndex: 1
         },
         terminal: {
             title: "Ask Camille",
@@ -41,7 +45,8 @@ function Home(){
             minimized: false,
             maximized: false,
             x: null,
-            y: null
+            y: null,
+            zIndex: 1
         },
         arcade: {
             title: "Arcade",
@@ -49,11 +54,13 @@ function Home(){
             minimized: false,
             maximized: false,
             x: null,
-            y: null
+            y: null,
+            zIndex: 1
         },
     });
 
     function openWindow(name) {
+        focusWindow(name),
         setWindows(prev => ({
             ...prev,
             [name]: {
@@ -95,6 +102,7 @@ function Home(){
     }
 
     function restoreWindow(name) {
+        focusWindow(name),
         setWindows(prev => ({
             ...prev,
             [name]: {
@@ -115,6 +123,22 @@ function Home(){
         }));
     }
 
+    function focusWindow(name) {
+        setTopZIndex(prevTopZIndex => {
+            const nextTopZIndex = prevTopZIndex + 1;
+
+            setWindows(prev => ({
+                ...prev,
+                [name]: {
+                    ...prev[name],
+                    zIndex: nextTopZIndex
+                }
+            }));
+
+            return nextTopZIndex;
+        });
+    }
+
     return (
         <div className="desktop">
             <div className="desktop-icons">
@@ -129,7 +153,7 @@ function Home(){
                 </div>
             </div>
 
-            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} maximizeWindow={maximizeWindow} closeWindow={closeWindow}></WindowManager>
+            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} maximizeWindow={maximizeWindow} focusWindow={focusWindow} closeWindow={closeWindow}></WindowManager>
             <TaskBar windows={windows} openWindow={restoreWindow}></TaskBar>
         </div>
     );

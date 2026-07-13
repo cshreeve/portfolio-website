@@ -1,4 +1,4 @@
-function AracadeContent() {
+function ArcadeContent() {
     return (
         <div>
             <p>I'm building a collection of small browser games to showcase Javascript and React.</p>
@@ -7,4 +7,4 @@ function AracadeContent() {
     );
 }
 
-export default AracadeContent;
+export default ArcadeContent;
