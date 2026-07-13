@@ -3,6 +3,8 @@ import Window from "./Window";
 import AboutContent from "./content/About";
 import ProjectsContent from "./content/Projects";
 import ResumeContent from "./content/Resume";
+import TerminalContent from "./content/Terminal";
+import ArcadeContent from "./content/Arcade";
 
 function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, closeWindow }) {
     return (
@@ -18,6 +20,14 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, cl
 
             {windows.resume.open && !windows.resume.minimized &&(
                 <Window title="My Resume" x={windows.resume.x} y={windows.resume.y} maximized={windows.resume.maximized} onMove={(x,y) => moveWindow("resume", x, y)} onMinimize={() => minimizeWindow("resume")} onMaximize={() => maximizeWindow("resume")} onClose={() => closeWindow("resume")}> <ResumeContent/></Window>
+            )}
+
+            {windows.terminal.open && !windows.terminal.minimized &&(
+                <Window title="Ask Camille" x={windows.terminal.x} y={windows.terminal.y} maximized={windows.terminal.maximized} onMove={(x,y) => moveWindow("terminal", x, y)} onMinimize={() => minimizeWindow("terminal")} onMaximize={() => maximizeWindow("terminal")} onClose={() => closeWindow("terminal")}> <TerminalContent/></Window>
+            )}
+
+            {windows.arcade.open && !windows.arcade.minimized &&(
+                <Window title="Arcade" x={windows.arcade.x} y={windows.arcade.y} maximized={windows.arcade.maximized} onMove={(x,y) => moveWindow("arcade", x, y)} onMinimize={() => minimizeWindow("arcade")} onMaximize={() => maximizeWindow("arcade")} onClose={() => closeWindow("arcade")}> <ArcadeContent/></Window>
             )}
 
         </>

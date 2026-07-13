@@ -35,6 +35,22 @@ function Home(){
             x: null,
             y: null
         },
+        terminal: {
+            title: "Ask Camille",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null
+        },
+        arcade: {
+            title: "Arcade",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null
+        },
     });
 
     function openWindow(name) {
@@ -108,8 +124,8 @@ function Home(){
                     <DesktopIcon icon={folderIcon} name="Resume" onClick={() => openWindow("resume")}></DesktopIcon>
                 </div>
                 <div className="applications">
-                    <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => openWindow("about")}></DesktopIcon>
-                    <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => openWindow("about")}></DesktopIcon>
+                    <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => openWindow("terminal")}></DesktopIcon>
+                    <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => openWindow("arcade")}></DesktopIcon>
                 </div>
             </div>
 

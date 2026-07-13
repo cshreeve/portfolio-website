@@ -47,8 +47,8 @@
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-wrap: break-word;
-    word-break: break-all;
+    overflow-wrap: normal;
+    word-break: normal;
 
     padding: 1rem;
 }

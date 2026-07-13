@@ -49,7 +49,7 @@ function Window({ title, x, y, maximized, onMove, onMinimize, onMaximize, onClos
                 <h1>{title}</h1>
                 <div className="window-control">
                     <button onClick={ onMinimize }>-</button>
-                    <button onClick= { onMaximize }>□</button>
+                    <button onClick= { onMaximize }>{maximized ? "❐" : "□"}</button>
                     <button onClick={ onClose }>X</button>
                 </div>
             </div>
