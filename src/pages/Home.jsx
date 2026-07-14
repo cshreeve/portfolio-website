@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Home.css"
 
-import DesktopIcon from "../components/DesktopIcon"
+import DesktopIcon from "../components/icons/DesktopIcon"
 import WindowManager from "../components/windows/WindowManager"
 import TaskBar from "../components/TaskBar"
 
@@ -14,6 +14,15 @@ function Home(){
     const [windows, setWindows] = useState({
         about: {
             title: "About Me",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        aboutText: {
+            title: "About.txt",
             open: false,
             minimized: false,
             maximized: false,
@@ -49,7 +58,7 @@ function Home(){
             zIndex: 1
         },
         arcade: {
-            title: "Arcade",
+            title: "Arcade.exe",
             open: false,
             minimized: false,
             maximized: false,
@@ -149,11 +158,11 @@ function Home(){
                 </div>
                 <div className="applications">
                     <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => openWindow("terminal")}></DesktopIcon>
-                    <DesktopIcon icon={arcadeIcon} name="Arcade" onClick={() => openWindow("arcade")}></DesktopIcon>
+                    <DesktopIcon icon={arcadeIcon} name="Arcade.exe" onClick={() => openWindow("arcade")}></DesktopIcon>
                 </div>
             </div>
 
-            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} maximizeWindow={maximizeWindow} focusWindow={focusWindow} closeWindow={closeWindow}></WindowManager>
+            <WindowManager windows={windows} moveWindow={moveWindow} minimizeWindow={minimizeWindow} maximizeWindow={maximizeWindow} focusWindow={focusWindow} openWindow={openWindow} closeWindow={closeWindow}></WindowManager>
             <TaskBar windows={windows} openWindow={restoreWindow}></TaskBar>
         </div>
     );

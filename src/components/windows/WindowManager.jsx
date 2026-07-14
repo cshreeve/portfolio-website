@@ -1,17 +1,22 @@
 import Window from "./Window";
 
 import AboutContent from "./content/About";
+import AboutTextContent from "./content/AboutText";
 import ProjectsContent from "./content/Projects";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
 
-function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, focusWindow, closeWindow }) {
+function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, focusWindow, openWindow, closeWindow }) {
     return (
         <>
 
             {windows.about.open && !windows.about.minimized && (
-                 <Window title="About Me" x={windows.about.x} y={windows.about.y} maximized={windows.about.maximized} onMove={(x,y) => moveWindow("about", x, y)} onMinimize={() => minimizeWindow("about")} onMaximize={() => maximizeWindow("about")} zIndex={windows.about.zIndex} onFocus={() => focusWindow("about")} onClose={() => closeWindow("about")}> <AboutContent/></Window> 
+                 <Window title="About Me" x={windows.about.x} y={windows.about.y} maximized={windows.about.maximized} onMove={(x,y) => moveWindow("about", x, y)} onMinimize={() => minimizeWindow("about")} onMaximize={() => maximizeWindow("about")} zIndex={windows.about.zIndex} onFocus={() => focusWindow("about")} onClose={() => closeWindow("about")}> <AboutContent openWindow={openWindow}/></Window> 
+            )}
+
+            {windows.aboutText.open && !windows.aboutText.minimized && (
+                 <Window title="About.txt" x={windows.aboutText.x} y={windows.aboutText.y} maximized={windows.aboutText.maximized} onMove={(x,y) => moveWindow("aboutText", x, y)} onMinimize={() => minimizeWindow("aboutText")} onMaximize={() => maximizeWindow("aboutText")} zIndex={windows.aboutText.zIndex} onFocus={() => focusWindow("aboutText")} onClose={() => closeWindow("aboutText")}> <AboutTextContent/></Window> 
             )}
 
             {windows.projects.open && !windows.projects.minimized &&(
@@ -27,7 +32,7 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
             )}
 
             {windows.arcade.open && !windows.arcade.minimized &&(
-                <Window title="Arcade" x={windows.arcade.x} y={windows.arcade.y} maximized={windows.arcade.maximized} onMove={(x,y) => moveWindow("arcade", x, y)} onMinimize={() => minimizeWindow("arcade")} onMaximize={() => maximizeWindow("arcade")} zIndex={windows.arcade.zIndex} onFocus={() => focusWindow("arcade")} onClose={() => closeWindow("arcade")}> <ArcadeContent/></Window>
+                <Window title="Arcade.exe" x={windows.arcade.x} y={windows.arcade.y} maximized={windows.arcade.maximized} onMove={(x,y) => moveWindow("arcade", x, y)} onMinimize={() => minimizeWindow("arcade")} onMaximize={() => maximizeWindow("arcade")} zIndex={windows.arcade.zIndex} onFocus={() => focusWindow("arcade")} onClose={() => closeWindow("arcade")}> <ArcadeContent/></Window>
             )}
 
         </>
