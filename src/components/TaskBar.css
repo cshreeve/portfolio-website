@@ -9,5 +9,43 @@
 
     display:flex;
     align-items: center;
-    background-color: rgb(69, 66, 66);
+    background-color: rgb(24, 102, 180);
+}
+
+.taskbar-items {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.taskbar-items button {
+    font-family: "Microsoft Sans Serif", sans-serif;
+
+    padding: 0.4rem 1.5rem;
+
+    background: #c0c0c0;
+    color: black;
+
+    border: 2px solid;
+
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: #555;
+    border-bottom-color: #555;
+
+    cursor: pointer;
+}
+
+.taskbar-items button:active {
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: white;
+    border-bottom-color: white;
+}
+.taskbar-items button {
+    box-shadow: 2px 2px 0px black;
+}
+
+.taskbar-items button:hover {
+    transform: translate(-1px, -1px);
 }

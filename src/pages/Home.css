@@ -4,6 +4,7 @@
     width: 100%;
 
     background-image: url("../assets/backgrounds/desktop.png");
+    background-color: rgb(78, 188, 252);
     background-size: cover;
     background-position: center;
 }
@@ -23,5 +24,6 @@
 .folders, .applications {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
 }

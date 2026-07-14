@@ -6,6 +6,7 @@ import WindowManager from "../components/windows/WindowManager"
 import TaskBar from "../components/TaskBar"
 
 import folderIcon from "../assets/icons/folder.png";
+import pdfIcon from "../assets/icons/pdf.png";
 import terminalIcon from "../assets/icons/terminal.png";
 import arcadeIcon from "../assets/icons/arcade.png";
 
@@ -154,7 +155,7 @@ function Home(){
                 <div className="folders">
                     <DesktopIcon icon={folderIcon} name="About Me" onClick={() => openWindow("about")}></DesktopIcon>
                     <DesktopIcon icon={folderIcon} name="Projects" onClick={() => openWindow("projects")}></DesktopIcon>
-                    <DesktopIcon icon={folderIcon} name="Resume" onClick={() => openWindow("resume")}></DesktopIcon>
+                    <DesktopIcon icon={pdfIcon} name="Resume.pdf" onClick={() => openWindow("resume")}></DesktopIcon>
                 </div>
                 <div className="applications">
                     <DesktopIcon icon={terminalIcon} name="Ask Camille" onClick={() => openWindow("terminal")}></DesktopIcon>
