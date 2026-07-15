@@ -2,6 +2,7 @@ import Window from "./Window";
 
 import AboutContent from "./content/About";
 import AboutTextContent from "./content/AboutText";
+import OverviewContent from "./content/Overview";
 import ProjectsContent from "./content/Projects";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
@@ -21,6 +22,10 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.projects.open && !windows.projects.minimized &&(
                 <Window title="My Projects" x={windows.projects.x} y={windows.projects.y} maximized={windows.projects.maximized} onMove={(x,y) => moveWindow("projects", x, y)} onMinimize={() => minimizeWindow("projects")} onMaximize={() => maximizeWindow("projects")} zIndex={windows.projects.zIndex} onFocus={() => focusWindow("projects")} onClose={() => closeWindow("projects")}> <ProjectsContent openWindow={openWindow}/></Window>
+            )}
+
+            {windows.overview.open && !windows.overview.minimized && (
+                 <Window title="Overview.txt" x={windows.overview.x} y={windows.overview.y} maximized={windows.overview.maximized} onMove={(x,y) => moveWindow("overview", x, y)} onMinimize={() => minimizeWindow("overview")} onMaximize={() => maximizeWindow("overview")} zIndex={windows.overview.zIndex} onFocus={() => focusWindow("overview")} onClose={() => closeWindow("overview")}> <OverviewContent/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(

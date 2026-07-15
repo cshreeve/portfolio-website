@@ -1,0 +1,52 @@
+.project {
+    padding-bottom: 1rem;
+}
+
+.project h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #555;
+}
+
+.project img {
+    float: left;
+    margin: 0 0.5rem 0 0;
+}
+
+.pop-img {
+    height: 100px;
+    width: auto;
+}
+
+.portfolio-img {
+    height: 100px;
+    width: auto;
+}
+
+.flight-img {
+    height: auto;
+    width: 160px;
+}
+
+.cnn-img {
+    height: auto;
+    width: 120px;
+}
+
+.project p {
+    line-height: 1.6;
+}
+
+.project::after {
+    content: "";
+    display: block;
+    clear: both;
+}

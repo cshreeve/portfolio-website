@@ -40,6 +40,15 @@ function Home(){
             y: null,
             zIndex: 1
         },
+        overview: {
+            title: "Overview.txt",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
         resume: {
             title: "Resume",
             open: false,
