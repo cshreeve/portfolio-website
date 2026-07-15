@@ -20,7 +20,7 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
             )}
 
             {windows.projects.open && !windows.projects.minimized &&(
-                <Window title="My Projects" x={windows.projects.x} y={windows.projects.y} maximized={windows.projects.maximized} onMove={(x,y) => moveWindow("projects", x, y)} onMinimize={() => minimizeWindow("projects")} onMaximize={() => maximizeWindow("projects")} zIndex={windows.projects.zIndex} onFocus={() => focusWindow("projects")} onClose={() => closeWindow("projects")}> <ProjectsContent/></Window>
+                <Window title="My Projects" x={windows.projects.x} y={windows.projects.y} maximized={windows.projects.maximized} onMove={(x,y) => moveWindow("projects", x, y)} onMinimize={() => minimizeWindow("projects")} onMaximize={() => maximizeWindow("projects")} zIndex={windows.projects.zIndex} onFocus={() => focusWindow("projects")} onClose={() => closeWindow("projects")}> <ProjectsContent openWindow={openWindow}/></Window>
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(

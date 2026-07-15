@@ -52,3 +52,10 @@
 
     padding: 1rem;
 }
+
+.folder-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    align-content: flex-start;
+}
