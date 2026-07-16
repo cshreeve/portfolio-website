@@ -58,6 +58,42 @@ function Home(){
             y: null,
             zIndex: 1
         },
+        popReadMe: {
+            title: "README.txt",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        popTech: {
+            title: "Architecture.png - Image Viewer",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        popDemo: {
+            title: "Demo.mp4 - Media Player",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        thesis: {
+            title: "Honors_Thesis.pdf",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
         resume: {
             title: "Resume",
             open: false,

@@ -4,7 +4,11 @@ import AboutContent from "./content/About";
 import AboutTextContent from "./content/AboutText";
 import OverviewContent from "./content/Overview";
 import ProjectsContent from "./content/Projects";
-import PopMediaContent from "./content/PopMedia";
+import PopMediaContent from "./content/PopMedia/PopMedia";
+import PopReadMeContent from "./content/PopMedia/PopReadMe";
+import PopDemoContent from "./content/PopMedia/PopDemo";
+import PopTechContent from "./content/PopMedia/PopTech";
+import ThesisContent from "./content/PopMedia/Thesis";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
@@ -31,6 +35,22 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.popMedia.open && !windows.popMedia.minimized && (
                  <Window title={windows.popMedia.title} x={windows.popMedia.x} y={windows.popMedia.y} maximized={windows.popMedia.maximized} onMove={(x,y) => moveWindow("popMedia", x, y)} onMinimize={() => minimizeWindow("popMedia")} onMaximize={() => maximizeWindow("popMedia")} zIndex={windows.popMedia.zIndex} onFocus={() => focusWindow("popMedia")} onClose={() => closeWindow("popMedia")}> <PopMediaContent openWindow={openWindow}/></Window> 
+            )}
+
+            {windows.popReadMe.open && !windows.popReadMe.minimized && (
+                 <Window title={windows.popReadMe.title} x={windows.popReadMe.x} y={windows.popReadMe.y} maximized={windows.popReadMe.maximized} onMove={(x,y) => moveWindow("popReadMe", x, y)} onMinimize={() => minimizeWindow("popReadMe")} onMaximize={() => maximizeWindow("popReadMe")} zIndex={windows.popReadMe.zIndex} onFocus={() => focusWindow("popReadMe")} onClose={() => closeWindow("popReadMe")}> <PopReadMeContent/></Window> 
+            )}
+
+            {windows.popTech.open && !windows.popTech.minimized && (
+                 <Window title={windows.popTech.title} x={windows.popTech.x} y={windows.popTech.y} maximized={windows.popTech.maximized} onMove={(x,y) => moveWindow("popTech", x, y)} onMinimize={() => minimizeWindow("popTech")} onMaximize={() => maximizeWindow("popTech")} zIndex={windows.popTech.zIndex} onFocus={() => focusWindow("popTech")} onClose={() => closeWindow("popTech")}> <PopTechContent/></Window> 
+            )}
+
+            {windows.popDemo.open && !windows.popDemo.minimized && (
+                 <Window title={windows.popDemo.title} x={windows.popDemo.x} y={windows.popDemo.y} maximized={windows.popDemo.maximized} onMove={(x,y) => moveWindow("popDemo", x, y)} onMinimize={() => minimizeWindow("popDemo")} onMaximize={() => maximizeWindow("popDemo")} zIndex={windows.popDemo.zIndex} onFocus={() => focusWindow("popDemo")} onClose={() => closeWindow("popDemo")}> <PopDemoContent/></Window> 
+            )}
+
+            {windows.thesis.open && !windows.thesis.minimized && (
+                 <Window title={windows.thesis.title} x={windows.thesis.x} y={windows.thesis.y} maximized={windows.thesis.maximized} onMove={(x,y) => moveWindow("thesis", x, y)} onMinimize={() => minimizeWindow("thesis")} onMaximize={() => maximizeWindow("thesis")} zIndex={windows.thesis.zIndex} onFocus={() => focusWindow("thesis")} onClose={() => closeWindow("thesis")}> <ThesisContent/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(
