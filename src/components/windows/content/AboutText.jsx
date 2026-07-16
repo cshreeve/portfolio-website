@@ -25,6 +25,9 @@ function AboutTextContent() {
                     <br />
                     Minors: Mathematics & Ecology
                 </p>
+                <p>
+                    As a part of my honors degree I wrote a thesis about the importance of user and developer experience druing application development. This file can be found in Projects/PopMedia.
+                </p>
             </section>
 
             <section>

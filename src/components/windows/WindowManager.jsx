@@ -9,6 +9,7 @@ import PopReadMeContent from "./content/PopMedia/PopReadMe";
 import PopDemoContent from "./content/PopMedia/PopDemo";
 import PopTechContent from "./content/PopMedia/PopTech";
 import ThesisContent from "./content/PopMedia/Thesis";
+import PortfolioContent from "./content/Portfolio/Portfolio";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
@@ -51,6 +52,10 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.thesis.open && !windows.thesis.minimized && (
                  <Window title={windows.thesis.title} x={windows.thesis.x} y={windows.thesis.y} maximized={windows.thesis.maximized} onMove={(x,y) => moveWindow("thesis", x, y)} onMinimize={() => minimizeWindow("thesis")} onMaximize={() => maximizeWindow("thesis")} zIndex={windows.thesis.zIndex} onFocus={() => focusWindow("thesis")} onClose={() => closeWindow("thesis")}> <ThesisContent/></Window> 
+            )}
+
+            {windows.portfolio.open && !windows.portfolio.minimized && (
+                 <Window title={windows.portfolio.title} x={windows.portfolio.x} y={windows.portfolio.y} maximized={windows.portfolio.maximized} onMove={(x,y) => moveWindow("portfolio", x, y)} onMinimize={() => minimizeWindow("portfolio")} onMaximize={() => maximizeWindow("portfolio")} zIndex={windows.portfolio.zIndex} onFocus={() => focusWindow("portfolio")} onClose={() => closeWindow("portfolio")}> <PortfolioContent openWindow={openWindow}/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(

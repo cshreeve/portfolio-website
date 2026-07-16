@@ -8,7 +8,7 @@ function ProjectContent( {openWindow} ) {
             <FileIcon icon={txtIcon} name="Overview.txt" onClick={() => openWindow("overview")}></FileIcon>
             <FileIcon icon={txtIcon} name="Internship.txt" onClick={() => openWindow("about")}></FileIcon>
             <FileIcon icon={folderIcon} name="PopMedia" onClick={() => openWindow("popMedia")}></FileIcon>
-            <FileIcon icon={folderIcon} name="Portfolio" onClick={() => openWindow("about")}></FileIcon>
+            <FileIcon icon={folderIcon} name="Portfolio" onClick={() => openWindow("portfolio")}></FileIcon>
             <FileIcon icon={folderIcon} name="Flight Club" onClick={() => openWindow("about")}></FileIcon>
             <FileIcon icon={folderIcon} name="CNN Classifier" onClick={() => openWindow("about")}></FileIcon>
         </div>
