@@ -103,6 +103,24 @@ function Home(){
             y: null,
             zIndex: 1
         },
+        folioReadMe: {
+            title: "README.txt",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        roadmap: {
+            title: "Roadmap.txt",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
         resume: {
             title: "Resume",
             open: false,

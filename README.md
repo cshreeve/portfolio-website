@@ -13,7 +13,7 @@ My personal portfolio website, built to showcase my software engineering project
 
 ## Built With
 - React
-- TypeScript (or JavaScript)
+- JavaScript
 - HTML5 & CSS3
 - Vite
 

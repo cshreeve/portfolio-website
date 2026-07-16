@@ -10,6 +10,8 @@ import PopDemoContent from "./content/PopMedia/PopDemo";
 import PopTechContent from "./content/PopMedia/PopTech";
 import ThesisContent from "./content/PopMedia/Thesis";
 import PortfolioContent from "./content/Portfolio/Portfolio";
+import FolioReadMeContent from "./content/Portfolio/FolioReadMe";
+import RoadMapContent from "./content/Portfolio/RoadMap";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
@@ -56,6 +58,14 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.portfolio.open && !windows.portfolio.minimized && (
                  <Window title={windows.portfolio.title} x={windows.portfolio.x} y={windows.portfolio.y} maximized={windows.portfolio.maximized} onMove={(x,y) => moveWindow("portfolio", x, y)} onMinimize={() => minimizeWindow("portfolio")} onMaximize={() => maximizeWindow("portfolio")} zIndex={windows.portfolio.zIndex} onFocus={() => focusWindow("portfolio")} onClose={() => closeWindow("portfolio")}> <PortfolioContent openWindow={openWindow}/></Window> 
+            )}
+
+            {windows.folioReadMe.open && !windows.folioReadMe.minimized && (
+                 <Window title={windows.folioReadMe.title} x={windows.folioReadMe.x} y={windows.folioReadMe.y} maximized={windows.folioReadMe.maximized} onMove={(x,y) => moveWindow("folioReadMe", x, y)} onMinimize={() => minimizeWindow("folioReadMe")} onMaximize={() => maximizeWindow("folioReadMe")} zIndex={windows.folioReadMe.zIndex} onFocus={() => focusWindow("folioReadMe")} onClose={() => closeWindow("folioReadMe")}> <FolioReadMeContent/></Window> 
+            )}
+
+            {windows.roadmap.open && !windows.roadmap.minimized && (
+                 <Window title={windows.roadmap.title} x={windows.roadmap.x} y={windows.roadmap.y} maximized={windows.roadmap.maximized} onMove={(x,y) => moveWindow("roadmap", x, y)} onMinimize={() => minimizeWindow("roadmap")} onMaximize={() => maximizeWindow("roadmap")} zIndex={windows.roadmap.zIndex} onFocus={() => focusWindow("roadmap")} onClose={() => closeWindow("roadmap")}> <RoadMapContent/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(

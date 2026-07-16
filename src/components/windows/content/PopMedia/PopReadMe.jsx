@@ -1,4 +1,4 @@
-import "./PopReadMe.css";
+import "../ReadMe.css";
 function PopReadMeContent() {
     return (
         <div className="readme">
