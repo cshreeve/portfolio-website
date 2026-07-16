@@ -4,6 +4,7 @@ import AboutContent from "./content/About";
 import AboutTextContent from "./content/AboutText";
 import OverviewContent from "./content/Overview";
 import ProjectsContent from "./content/Projects";
+import PopMediaContent from "./content/PopMedia";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
@@ -26,6 +27,10 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.overview.open && !windows.overview.minimized && (
                  <Window title="Overview.txt" x={windows.overview.x} y={windows.overview.y} maximized={windows.overview.maximized} onMove={(x,y) => moveWindow("overview", x, y)} onMinimize={() => minimizeWindow("overview")} onMaximize={() => maximizeWindow("overview")} zIndex={windows.overview.zIndex} onFocus={() => focusWindow("overview")} onClose={() => closeWindow("overview")}> <OverviewContent/></Window> 
+            )}
+
+            {windows.popMedia.open && !windows.popMedia.minimized && (
+                 <Window title={windows.popMedia.title} x={windows.popMedia.x} y={windows.popMedia.y} maximized={windows.popMedia.maximized} onMove={(x,y) => moveWindow("popMedia", x, y)} onMinimize={() => minimizeWindow("popMedia")} onMaximize={() => maximizeWindow("popMedia")} zIndex={windows.popMedia.zIndex} onFocus={() => focusWindow("popMedia")} onClose={() => closeWindow("popMedia")}> <PopMediaContent openWindow={openWindow}/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(
