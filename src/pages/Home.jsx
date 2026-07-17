@@ -49,6 +49,15 @@ function Home(){
             y: null,
             zIndex: 1
         },
+        internship: {
+            title: "Internship.txt",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
         popMedia: {
             title: "PopMedia",
             open: false,

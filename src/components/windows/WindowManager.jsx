@@ -3,6 +3,7 @@ import Window from "./Window";
 import AboutContent from "./content/About";
 import AboutTextContent from "./content/AboutText";
 import OverviewContent from "./content/Overview";
+import InternshipContent from "./content/Internship";
 import ProjectsContent from "./content/Projects";
 import PopMediaContent from "./content/PopMedia/PopMedia";
 import PopReadMeContent from "./content/PopMedia/PopReadMe";
@@ -39,6 +40,10 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.overview.open && !windows.overview.minimized && (
                  <Window title="Overview.txt" x={windows.overview.x} y={windows.overview.y} maximized={windows.overview.maximized} onMove={(x,y) => moveWindow("overview", x, y)} onMinimize={() => minimizeWindow("overview")} onMaximize={() => maximizeWindow("overview")} zIndex={windows.overview.zIndex} onFocus={() => focusWindow("overview")} onClose={() => closeWindow("overview")}> <OverviewContent/></Window> 
+            )}
+
+            {windows.internship.open && !windows.internship.minimized && (
+                 <Window title={windows.internship.title} x={windows.internship.x} y={windows.internship.y} maximized={windows.internship.maximized} onMove={(x,y) => moveWindow("internship", x, y)} onMinimize={() => minimizeWindow("internship")} onMaximize={() => maximizeWindow("internship")} zIndex={windows.internship.zIndex} onFocus={() => focusWindow("internship")} onClose={() => closeWindow("internship")}> <InternshipContent/></Window> 
             )}
 
             {windows.popMedia.open && !windows.popMedia.minimized && (
