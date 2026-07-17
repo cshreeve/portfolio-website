@@ -139,15 +139,6 @@ function Home(){
             y: null,
             zIndex: 1
         },
-        fcDemo: {
-            title: "Demo.mp4 - Media Player",
-            open: false,
-            minimized: false,
-            maximized: false,
-            x: null,
-            y: null,
-            zIndex: 1
-        },
         catDemo: {
             title: "Cat.mp4 - Media Player",
             open: false,

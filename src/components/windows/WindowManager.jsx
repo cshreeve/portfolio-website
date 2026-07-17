@@ -14,7 +14,6 @@ import FolioReadMeContent from "./content/Portfolio/FolioReadMe";
 import RoadMapContent from "./content/Portfolio/RoadMap";
 import FlightClubContent from "./content/FlightClub/FlightClub";
 import FlightReadMeContent from "./content/FlightClub/FlightReadMe";
-import FCDemoContent from "./content/FlightClub/FCDemo";
 import CatDemoContent from "./content/FlightClub/CatDemo";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
@@ -78,10 +77,6 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.flightReadMe.open && !windows.flightReadMe.minimized && (
                  <Window title={windows.flightReadMe.title} x={windows.flightReadMe.x} y={windows.flightReadMe.y} maximized={windows.flightReadMe.maximized} onMove={(x,y) => moveWindow("flightReadMe", x, y)} onMinimize={() => minimizeWindow("flightReadMe")} onMaximize={() => maximizeWindow("flightReadMe")} zIndex={windows.flightReadMe.zIndex} onFocus={() => focusWindow("flightReadMe")} onClose={() => closeWindow("flightReadMe")}> <FlightReadMeContent/></Window> 
-            )}
-
-            {windows.fcDemo.open && !windows.fcDemo.minimized && (
-                 <Window title={windows.fcDemo.title} x={windows.fcDemo.x} y={windows.fcDemo.y} maximized={windows.fcDemo.maximized} onMove={(x,y) => moveWindow("fcDemo", x, y)} onMinimize={() => minimizeWindow("fcDemo")} onMaximize={() => maximizeWindow("fcDemo")} zIndex={windows.fcDemo.zIndex} onFocus={() => focusWindow("fcDemo")} onClose={() => closeWindow("fcDemo")}> <FCDemoContent/></Window> 
             )}
 
             {windows.catDemo.open && !windows.catDemo.minimized && (

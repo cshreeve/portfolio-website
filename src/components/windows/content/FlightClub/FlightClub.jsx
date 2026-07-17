@@ -6,7 +6,7 @@ function FlightClubContent( {openWindow} ) {
     return (
         <div className="folder-files">
             <FileIcon icon={txtIcon} name="README.txt" onClick={() => openWindow("flightReadMe")}></FileIcon>
-            <FileIcon icon={mp4Icon} name="Demo.mp4" onClick={() => openWindow("fcDemo")}></FileIcon>
+            <FileIcon icon={mp4Icon} name="Demo.mp4" onClick={() => window.open("https://youtu.be/0ifNfX-lGaA", "_blank")}/>
             <FileIcon icon={mp4Icon} name="User_Study.mp4" onClick={() => openWindow("catDemo")}></FileIcon>
         </div>
     );
