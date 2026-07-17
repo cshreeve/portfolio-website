@@ -45,7 +45,7 @@ function OverviewContent() {
                 <img src={cnnSpectogram} alt="CNN Spectogram" className="cnn-img"></img>
                 <div className="project-info">
                     <h2>CNN Music Genre Classifier</h2>
-                    <h3>Machine Learning • Python • TensorFlow</h3>
+                    <h3>Machine Learning • Python • NumPy</h3>
                     <p>For my Practical Machine Learning final project, I trained a convolutional neural network to classify 1,000 thirty-second music clips spanning ten genres. Audio files were converted into spectrograms, allowing the model to learn visual representations of sound while experimenting with CNN architectures, hyperparameter tuning, and model evaluation.</p>
                 </div>
             </section>

@@ -15,6 +15,8 @@ import RoadMapContent from "./content/Portfolio/RoadMap";
 import FlightClubContent from "./content/FlightClub/FlightClub";
 import FlightReadMeContent from "./content/FlightClub/FlightReadMe";
 import CatDemoContent from "./content/FlightClub/CatDemo";
+import CNNContent from "./content/CNN/CNN";
+import CNNReadMeContent from "./content/CNN/CNNReadMe";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
@@ -81,6 +83,14 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.catDemo.open && !windows.catDemo.minimized && (
                  <Window title={windows.catDemo.title} x={windows.catDemo.x} y={windows.catDemo.y} maximized={windows.catDemo.maximized} onMove={(x,y) => moveWindow("catDemo", x, y)} onMinimize={() => minimizeWindow("catDemo")} onMaximize={() => maximizeWindow("catDemo")} zIndex={windows.catDemo.zIndex} onFocus={() => focusWindow("catDemo")} onClose={() => closeWindow("catDemo")}> <CatDemoContent/></Window> 
+            )}
+
+            {windows.cnn.open && !windows.cnn.minimized && (
+                 <Window title={windows.cnn.title} x={windows.cnn.x} y={windows.cnn.y} maximized={windows.cnn.maximized} onMove={(x,y) => moveWindow("cnn", x, y)} onMinimize={() => minimizeWindow("cnn")} onMaximize={() => maximizeWindow("cnn")} zIndex={windows.cnn.zIndex} onFocus={() => focusWindow("cnn")} onClose={() => closeWindow("cnn")}> <CNNContent openWindow={openWindow}/></Window> 
+            )}
+
+            {windows.cnnReadMe.open && !windows.cnnReadMe.minimized && (
+                 <Window title={windows.cnnReadMe.title} x={windows.cnnReadMe.x} y={windows.cnnReadMe.y} maximized={windows.cnnReadMe.maximized} onMove={(x,y) => moveWindow("cnnReadMe", x, y)} onMinimize={() => minimizeWindow("cnnReadMe")} onMaximize={() => maximizeWindow("cnnReadMe")} zIndex={windows.cnnReadMe.zIndex} onFocus={() => focusWindow("cnnReadMe")} onClose={() => closeWindow("cnnReadMe")}> <CNNReadMeContent/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(
