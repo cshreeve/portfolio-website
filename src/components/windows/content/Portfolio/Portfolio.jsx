@@ -1,7 +1,5 @@
 import FileIcon from "../../../icons/FileIcon";
-import folderIcon from "../../../../assets/icons/folder.png";
 import txtIcon from "../../../../assets/icons/txt.png";
-import imgIcon from "../../../../assets/icons/img.png";
 import urlIcon from "../../../../assets/icons/url.png";
 
 function PortfolioContent( {openWindow} ) {

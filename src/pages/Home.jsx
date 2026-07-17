@@ -121,6 +121,42 @@ function Home(){
             y: null,
             zIndex: 1
         },
+        flightclub: {
+            title: "Flight Club",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        flightReadMe: {
+            title: "README.txt",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        fcDemo: {
+            title: "Demo.mp4 - Media Player",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
+        catDemo: {
+            title: "Cat.mp4 - Media Player",
+            open: false,
+            minimized: false,
+            maximized: false,
+            x: null,
+            y: null,
+            zIndex: 1
+        },
         resume: {
             title: "Resume",
             open: false,

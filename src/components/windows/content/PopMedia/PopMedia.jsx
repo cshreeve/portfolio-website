@@ -1,5 +1,4 @@
 import FileIcon from "../../../icons/FileIcon";
-import folderIcon from "../../../../assets/icons/folder.png";
 import txtIcon from "../../../../assets/icons/txt.png";
 import mp4Icon from "../../../../assets/icons/mp4.png";
 import imgIcon from "../../../../assets/icons/img.png";

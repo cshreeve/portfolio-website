@@ -12,6 +12,10 @@ import ThesisContent from "./content/PopMedia/Thesis";
 import PortfolioContent from "./content/Portfolio/Portfolio";
 import FolioReadMeContent from "./content/Portfolio/FolioReadMe";
 import RoadMapContent from "./content/Portfolio/RoadMap";
+import FlightClubContent from "./content/FlightClub/FlightClub";
+import FlightReadMeContent from "./content/FlightClub/FlightReadMe";
+import FCDemoContent from "./content/FlightClub/FCDemo";
+import CatDemoContent from "./content/FlightClub/CatDemo";
 import ResumeContent from "./content/Resume";
 import TerminalContent from "./content/Terminal";
 import ArcadeContent from "./content/Arcade";
@@ -66,6 +70,22 @@ function WindowManager({ windows, moveWindow, minimizeWindow, maximizeWindow, fo
 
             {windows.roadmap.open && !windows.roadmap.minimized && (
                  <Window title={windows.roadmap.title} x={windows.roadmap.x} y={windows.roadmap.y} maximized={windows.roadmap.maximized} onMove={(x,y) => moveWindow("roadmap", x, y)} onMinimize={() => minimizeWindow("roadmap")} onMaximize={() => maximizeWindow("roadmap")} zIndex={windows.roadmap.zIndex} onFocus={() => focusWindow("roadmap")} onClose={() => closeWindow("roadmap")}> <RoadMapContent/></Window> 
+            )}
+
+            {windows.flightclub.open && !windows.flightclub.minimized && (
+                 <Window title={windows.flightclub.title} x={windows.flightclub.x} y={windows.flightclub.y} maximized={windows.flightclub.maximized} onMove={(x,y) => moveWindow("flightclub", x, y)} onMinimize={() => minimizeWindow("flightclub")} onMaximize={() => maximizeWindow("flightclub")} zIndex={windows.flightclub.zIndex} onFocus={() => focusWindow("flightclub")} onClose={() => closeWindow("flightclub")}> <FlightClubContent openWindow={openWindow}/></Window> 
+            )}
+
+            {windows.flightReadMe.open && !windows.flightReadMe.minimized && (
+                 <Window title={windows.flightReadMe.title} x={windows.flightReadMe.x} y={windows.flightReadMe.y} maximized={windows.flightReadMe.maximized} onMove={(x,y) => moveWindow("flightReadMe", x, y)} onMinimize={() => minimizeWindow("flightReadMe")} onMaximize={() => maximizeWindow("flightReadMe")} zIndex={windows.flightReadMe.zIndex} onFocus={() => focusWindow("flightReadMe")} onClose={() => closeWindow("flightReadMe")}> <FlightReadMeContent/></Window> 
+            )}
+
+            {windows.fcDemo.open && !windows.fcDemo.minimized && (
+                 <Window title={windows.fcDemo.title} x={windows.fcDemo.x} y={windows.fcDemo.y} maximized={windows.fcDemo.maximized} onMove={(x,y) => moveWindow("fcDemo", x, y)} onMinimize={() => minimizeWindow("fcDemo")} onMaximize={() => maximizeWindow("fcDemo")} zIndex={windows.fcDemo.zIndex} onFocus={() => focusWindow("fcDemo")} onClose={() => closeWindow("fcDemo")}> <FCDemoContent/></Window> 
+            )}
+
+            {windows.catDemo.open && !windows.catDemo.minimized && (
+                 <Window title={windows.catDemo.title} x={windows.catDemo.x} y={windows.catDemo.y} maximized={windows.catDemo.maximized} onMove={(x,y) => moveWindow("catDemo", x, y)} onMinimize={() => minimizeWindow("catDemo")} onMaximize={() => maximizeWindow("catDemo")} zIndex={windows.catDemo.zIndex} onFocus={() => focusWindow("catDemo")} onClose={() => closeWindow("catDemo")}> <CatDemoContent/></Window> 
             )}
 
             {windows.resume.open && !windows.resume.minimized &&(
